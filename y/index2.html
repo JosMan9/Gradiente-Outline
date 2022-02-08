@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>CSS Gradiente Radial</title>
+    <link rel="stylesheet" href="gradienteLi.css">
+    <script src="acciones_radial.js"></script>
+</head>
+
+<header id="lienal_h2">
+    Gradiente Radial
+    <p></p>
+    (RGBA & HSLA)
+    <div id="secc_principal">
+        <ul>
+            <li>|<a href="index4.html">Página Principal</a>|</li>
+        </ul>
+    </div>
+</header>
+
+<body id="cuerpo" onload="agregarAmbosRadial()">
+    <div id="padreR">
+        <form class="formlulario1">
+            <fieldset id="formularioLineal">
+                <legend>Control de página</legend>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="fondoRGBA" disabled>
+                    Fondo RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="fondoHSLA" disabled>
+                    Fondo HSLA
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="botonesRGBA" disabled>
+                    Botones RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="botonesHSLA" disabled>
+                    Botones HSLA
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="campoRGBA" disabled>
+                    Campo RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="campoHSLA" disabled>
+                    Campo HSLA
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="controlRGBA" disabled>
+                    Control de Página RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="controlHSLA" disabled>
+                    Control de Página HSLA
+                </label>
+            </fieldset>
+        </form>
+        <fieldset id="campoR">
+            <legend>RGBA</legend>
+            <select  id="sele_rad">
+                <option value="0">Circle</option>
+                <option value="1">Ellipse</option>
+            </select>
+            <label id="posicion_labl">Posición: %</label>
+            <input type="number" id="txt_posRGBA" name="pos" min="0" max="100" onkeyup="validarRGBAradial()">
+            <p></p>
+            <label id="rojo_lbl">R:</label>
+            <input id="txt_rojo" type="number" name="numeroR" min="0" max="255" onkeyup="validarRGBAradial()">
+            <label id="verde_lbl">G:</label>
+            <input id="txt_verde" type="number" name="numeroR" min="0" max="255" onkeyup="validarRGBAradial()">
+            <label id="azul_lbl">B:</label>
+            <input id="txt_azul" type="number" name="numeroR" min="0" max="255" onkeyup="validarRGBAradial()">
+            <label id="trans_lbl">A:</label>
+            <select id="miselect" name="selectRadial" onchange="validarRGBAradial()">
+                <option value="0">0</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1">1</option>
+            </select>
+            <label id="posicion_lbl">%</label>
+            <input id="txt_posicion" type="number" name="numeroR" min="0" max="100" onkeyup="validarRGBAradial()">
+            <INPUt disabled name="color_prueba" type="number" min=0 max=100></INPUt>
+        </fieldset>
+        <p></p>
+        <button class="accion" id="btn_accionRadial" disabled type="button" onclick="agregarColorRadial()">Color</button>
+        <button id="btn_agregarRadial" type="button"  onclick="agregarRGBA2()">Agregar</button>
+        <p></p>
+        <canvas id="milienzoR" width="100px" height="100px"></canvas>
+    </div>
+
+    <p></p>
+
+    <div id="padreR2">
+        <fieldset id="campoR2">
+            <legend>HSLA</legend>
+            <select name="select_radial2" id="selec_radial2">
+                <option value="0">Circle</option>
+                <option value="1">Ellipse</option>
+            </select>
+            <label id="posicion_label">Posición: %</label>
+            <input type="number" id="txt_posHSLA" name="pos2" min="0" max="100" onkeyup="validarDatosLinealHSLA()">
+            <p></p>
+            <label id="label_tono">H:</label>
+            <input type="number" name="numeroR2" id="txt_tono" min="0" max="360" onkeyup="validarDatosLinealHSLA()" >
+            <label id="label_saturacion">S:</label>
+            <input type="number" name="numeroR2" id="txt_satuacion" min="0" max="100" onkeyup="validarDatosLinealHSLA()">
+            <label id="label_luminosidad">L:</label>
+            <input type="number" name="numeroR2" id="txt_luminosidad" min="0" max="100" onkeyup="validarDatosLinealHSLA()">
+            <label id="label_opacidad">A:</label>
+            <select id="miselect2" name="numero_radialR2" onchange="validarDatosLinealHSLA()">
+                <option value="0">0</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1">1</option>
+            </select>
+            <label id="label_grados">%</label>
+            <input type="number" id="posicion_hsla" min="0" max="100" name="numeroR2" onchange="validarDatosLinealHSLA()">
+            <INPUt disabled name="color_prueba2" type="number" min=0 max=100></INPUt>
+        </fieldset>
+        <p></p>
+        <button class="accion" id="btn_accion2Radial" disabled type="button" onclick="agregarHSLARadial()">Color</button>
+        <button id="btn_agregar2Radial" type="button" onclick="agregarHSLA2()">Agregar</button>
+        <p></p>
+        <canvas id="milienzoR2" width="100px" height="100px"></canvas>
+    </div>
+</body>
+
+<footer>José Manuel Rosas López @Copyright</footer>
+
+</html>

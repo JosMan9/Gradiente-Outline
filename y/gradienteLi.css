@@ -1,0 +1,331 @@
+#principal {
+    background: linear-gradient(100deg, #779EC2, #9FC6F1);
+}
+
+#outline_body {
+    background: url("fondo3.jpg");
+}
+
+#tit1 {
+    display: block;
+    width: 300px;
+    background: linear-gradient(60deg, #565050,#C5BABA);
+    height: 30px;
+    border:  5px #887F7F groove;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0px 0px 40px, 40px;
+    -webkit-border-radius: 0px 0px 40px 40px;
+    box-shadow: red 15px, 15px, 15px, inset;
+    -webkit-box-shadow: red 15px, 15px, 15px, 15px;
+    -moz-box-shadow: red 15px, 15px, 15px, 15px;
+    margin: 10px    auto;
+}
+
+#tit_2 {
+    display: block;
+    width: 300px;
+    background: -webkit-radial-gradient(50%, ellipse,  #00FFFF 20%, #C97876 40%, #0000FF 49%, rgb(250,233,62) 50%);
+    height: 30px;
+    border:  5px #887F7F groove;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0px 0px 40px, 40px;
+    /*-moz-border-radius: 0px 0px 40px 40px;*/
+    -webkit-border-radius: 0px 0px 40px 40px;
+    box-shadow: red 15px, 15px, 15px, inset;
+    -webkit-box-shadow: red 15px, 15px, 15px, 15px;
+    -moz-box-shadow: red 15px, 15px, 15px, 15px;
+    margin: 10px    auto;
+}
+
+
+#lienal_h {
+    /*background-image: url("descarga.jpg");*/
+    background: url("descarga.jpg");
+    height: 100px;    
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 5px;
+    font-size: 30px;
+    padding: 6px;
+    text-align: left;
+    border: #0000FF solid;
+}
+
+#lienal_h2 {
+    /*background-image: url("descarga.jpg");*/
+    background: url("descarga2.jpg");
+    height: 100px;    
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 5px;
+    font-size: 30px;
+    padding: 6px;
+    text-align: left;
+    border: #0000FF solid;
+}
+
+
+#tit {
+    background: url("descarga3.jpg");
+    height: 100px;    
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 5px;
+    font-size: 40px;
+    text-align: left;
+    border: #0000FF solid;
+    padding-left: 100px;
+    padding-bottom: 20px;
+}
+
+fieldset {
+    width: 500px;
+}
+
+#campo {
+    position: relative;
+    right: -10px;
+    top: -90px;
+}
+
+#titulo_header {
+    background: url("descarga4.jpg");
+    height: 100px;    
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 5px;
+    font-size: 30px;
+    padding: 6px;
+    text-align: left;
+    border: #0000FF solid;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    padding-right: 10px;
+    margin-right: 30px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    border-color: black;
+    border-radius: 10px;
+}
+
+button:hover {
+    color: black;
+    background: gray;
+}
+
+#btn_accion, #btn_agregar, #milienzo, #campo2, #campoR,#campo, #btn_accion2, 
+#btn_agregar2, #milienzo2, #btn_agregarRadial, #btn_accionRadial,
+#milienzoR, #campoR2, #btn_accion2Radial, #btn_agregar2Radial, #milienzoR2 {
+
+    position: relative;
+    top: -160px;
+    right: -10px;
+}
+
+#campoOut, #btn_accionOut, #milienzoOut {
+    position: relative;
+    top: -50px;
+    right: -10px;
+}
+
+#campoOut {
+    width: max-content;
+}
+
+#campoR, #campoR2 {
+    width: 600px;
+}
+
+canvas {
+    background: black;
+    width: 1300px;
+    height: 100px;
+}
+
+#milienzoOut {
+    background: url("fondo.jpg");
+    width: 1000px;
+}
+
+
+#milienzo2 {
+    background: black;
+}
+
+#prueba_color {
+    background: black;
+}
+
+.formlulario1 {
+    position: relative;
+    right: -900px;
+    top: 10px;
+    text-align: center;
+    display: table-cell;    
+    
+}
+
+#formularioLineal{
+    width: 400px;
+}
+
+#formularioOut {
+    width: 300px;
+    position: relative;
+    right: -100px;
+}
+
+.control {
+    padding: 7px;
+}
+
+.codigo {
+    text-indent: 20px;
+}
+
+.tituloM {
+    display: block;
+    border-style: solid;
+    width: 300px;
+    text-align: center;
+    border-top: red;
+    border-left: red;
+    -webkit-box-shadow: gray 8px 8px;
+    box-shadow: gray 8px 8px;
+    background: #06295F;
+    color: white    ;
+}
+
+.parrafo{
+    padding: 5px;
+    background: #DEECF9;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+}
+
+#navegador ul{
+    list-style-type: none;
+    text-align: center;
+}
+ #navegador li{
+    position: relative;
+    top: -150px;
+    right: -230px;
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+
+#navegador li a {
+    padding: 2px 7px 2px 7px;
+    color: #ffffff;
+    font-size: 20px;
+
+    text-decoration: none;
+}
+ #navegador li a:hover{
+    color: #4197F7;
+}
+
+.titulo_p {
+    position: relative;
+    top: -20px;
+}
+.titulo_p2 {
+    position: relative;
+    top: -40px;
+}
+
+section {
+    background: #90D6E3;
+    border-style: dashed;
+    width: max-content;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+    right: -480px;
+}
+
+#seccion2 {
+    width: max-content;
+    position: relative;
+    right: -390px;
+}
+
+#seccion3, #seccion4, #seccion5 {
+    width: max-content;
+    text-align: left;
+}
+
+#secc_principal li {
+    position: relative;
+    top: -100px;
+    right: -930px;
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+
+#secc_principal li a {
+    padding: 2px 7px 2px 7px;
+    color: #ffffff;
+    font-size: 40px;
+
+    text-decoration: none;
+}
+
+#secc_principal li a:hover{
+    color: #90B1E3;
+}
+
+#secc_principal4 li {
+    position: relative;
+    top: -100px;
+    right: -830px;
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+
+#secc_principal4 li a {
+    padding: 2px 7px 2px 7px;
+    color: #ffffff;
+    font-size: 40px;
+
+    text-decoration: none;
+}
+
+#secc_principal4 li a:hover{
+    color: #E390D1;
+}
+
+input[name="color_prueba"] {
+    border-color: black;
+    margin-left: 57px;
+}
+
+input[name="color_prueba2"] {
+    border-color: black;
+    margin-left: 57px;
+}
+
+#color_prueba {
+    border-color: black;
+    margin-left: 60px;
+}
+
+footer {
+    text-align: center;
+    border-color: black;
+    border-radius: 15px;
+    background: blanchedalmond;
+}
+

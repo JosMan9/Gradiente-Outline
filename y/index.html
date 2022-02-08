@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>CSS Gradiente Lineal</title>
+    <link rel="stylesheet" href="gradienteLi.css">
+    <script src="acciones_gradiente.js"></script>
+</head>
+
+<header id="lienal_h">
+    Gradiente Lineal
+    <p></p>
+    (RGBA & HSLA)
+    <div id="secc_principal">
+        <ul>
+            <li>|<a href="index4.html">Página Principal</a>|</li>
+        </ul>
+    </div>
+</header>
+
+<body onload="agregarAmbosLineal()" id="cuerpo">
+    <div id="padre">
+        <form class="formlulario1">
+            <fieldset id="formularioLineal">
+                <legend>Control de página</legend>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="fondoRGBA" disabled>
+                    Fondo RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="fondoHSLA" disabled>
+                    Fondo HSLA
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="botonesRGBA" disabled>
+                    Botones RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="botonesHSLA" disabled>
+                    Botones HSLA
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="campoRGBA" disabled>
+                    Campo RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="campoHSLA" disabled>
+                    Campo HSLA
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="controlRGBA" disabled>
+                    Control de Página RGBA
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="controlHSLA" disabled>
+                    Control de Página HSLA
+                </label>
+            </fieldset>
+        </form>
+        <p></p>
+        <fieldset id="campo">
+            <legend>RGBA</legend>
+            <label id="grado_lbl">Deg:</label>
+            <input id="txt_grado" type="number" name="Grado_color" min="0" max="360" onkeyup="validarDatosLineal()">
+            <p></p>
+            <label id="rojo_lbl">R:</label>
+            <input id="txt_rojo" type="number" name="numero" min="0" max="255" onkeyup="validarDatosLineal()">
+            <label id="verde_lbl">G:</label>
+            <input id="txt_verde" type="number" name="numero" min="0" max="255" onkeyup="validarDatosLineal()">
+            <label id="azul_lbl">B:</label>
+            <input id="txt_azul" type="number" name="numero" min="0" max="255" onkeyup="validarDatosLineal()">
+            <label id="trans_lbl">A:</label>
+            <select id="miselect" name="numeroSelect" onchange="validarDatosLineal()">
+                <option value="0">0</option>
+                <option va
+                +lue="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1">1</option>
+            </select>
+            <INPUt disabled name="color_prueba" type="number" min=0 max=100></INPUt>
+        </fieldset>
+        <p></p>
+        <button class="accion" disabled id="btn_accion" type="button" onclick="cambiaColor()">Color</button>
+        <button id="btn_agregar" type="button" onclick="agregarRGB()">Agregar</button>
+        <p></p>
+        <canvas id="milienzo" width="100px" height="100px"></canvas>
+    </div>
+    <p></p>
+    <div id="padre2">
+        <fieldset id="campo2">
+            <legend>HSLA</legend>
+            <label id="label_grados">Deg:</label>
+            <input type="number" id="grado_hsla" min="0" max="360" onkeyup="validarDatosLinealHSLA()">
+            <p></p>
+            <label id="label_tono">H:</label>
+            <input type="number" class="colorH1" name="numero2" id="txt_tono" min="0" max="360"
+                onkeyup="validarDatosLinealHSLA()">
+            <label id="label_saturacion">S:</label>
+            <input type="number" class="colorH1" name="numero2" id="txt_satuacion" min="0" max="100"
+                onkeyup="validarDatosLinealHSLA()">
+            <label id="label_luminosidad">L:</label>
+            <input type="number" class="colorH1" name="numero2" id="txt_luminosidad" min="0" max="100"
+                onkeyup="validarDatosLinealHSLA()">
+            <label id="label_opacidad">A:</label>
+            <select id="miselect2" class="colorH1select" name="numeroSelect2" onchange="validarDatosLinealHSLA()">
+                <option value="0">0</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1">1</option>
+            </select>
+            <INPUt disabled name="color_prueba2" type="number" min=0 max=100></INPUt>
+        </fieldset>
+        <p></p>
+        <button class="accion" disabled id="btn_accion2" type="button" onclick="cambiaHSLA()">Color</button>
+        <button id="btn_agregar2" type="button" onclick="agregarHSLA()">Agregar</button>
+        <p></p>
+        <canvas id="milienzo2" width="100px" height="100px"></canvas>
+    </div>
+</body>
+
+<footer>José Manuel Rosas López @Copyright</footer>
+
+</html>

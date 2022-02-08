@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="gradienteLi.css">
+</head>
+
+<header id="titulo_header">
+    <p class="titulo_p"> Atributos CSS</p>
+    <p class="titulo_p2">Gradiente Lineeal, Gradiente Radial, funciones rgba() y hsla() y el atributo Outline</p>
+
+    <div id="navegador">
+        <ul>
+            <li>|<a href="index.html">Gradiente Lineal (RGBA & HSLA)</a> |</li>
+            <li>|<a href="index2.html"> Gradiente Radial (RGBA & HSLA)</a> |</li>
+            <li>|<a href="index3.html">Outline</a>|</li>
+        </ul>
+    </div>
+
+</header>
+
+<body id="principal">
+    <h1 class="tituloM">
+        Gradiente Lineal
+    </h1>
+    <div>
+        <p class="parrafo">Los gradientes son uno de los efectos más atractivos entre aquellos incorporados en CSS3.
+            Este efecto era prácticamente imposible de implementar usando técnicas anteriores pero
+            ahora es realmente fácil de hacer usando CSS. Una propiedad background con algunos
+            pocos parámetros es suficiente para convertir su documento en una página web con
+            aspecto profesional. Los gradientes son configurados como fondos, por lo que podemos usar las
+            propiedades background o background-image para declararlos. La sintaxis para los
+            valores declarados en estas propiedades es linear-gradient(posición inicio,
+            color inicial, color final). Los atributos de la función linear-gradient()
+            indican el punto de comienzo y los colores usados para crear el gradiente. El primer valor
+            puede ser especificado en pixeles, porcentaje o usando las palabras clave top, bottom,
+            left y right (como hicimos en nuestro ejemplo). El punto de comienzo puede ser
+            reemplazado por un ángulo para declarar una dirección específica del gradiente:
+        </p>
+        <section id="seccion1">
+            <img src="codigo4.png" alt="100px">
+        </section>
+
+    </div>
+
+    <h1 class="tituloM">Gradiente Radial</h1>
+    <p class="parrafo">La sintaxis estándar para los gradientes radiales solo difiere en unos pocos aspectos con
+        respecto a la anterior. Debemos usar la función radial-gradient() y un nuevo
+        atributo para la forma:
+    </p>
+    <section id="seccion2">
+        <img src="codigo5.png" alt="100px">
+    </section>
+
+    <p class="parrafo">La posición de comienzo es el origen y puede ser declarada en pixeles, porcentaje o
+        una combinación de las palabras clave center, top, bottom, left y right. Existen dos
+        posibles valores para la forma (circle y ellipse) y la terminación para el color indica el
+        color y la posición donde las transiciones comienzan.
+    </p>
+
+    <h1 class="tituloM">Función rgba()</h1>
+    <p class="parrafo">Hasta este momento los colores fueron declarados como sólidos utilizando valores
+        hexadecimales o la función rgb() para decimales. CSS3 ha agregado una nueva función
+        llamada rgba() que simplifica la asignación de colores y transparencias. Esta función
+        además resuelve un problema previo provocado por la propiedad opacity.
+        La función rgba() tiene cuatro atributos. Los primeros tres son similares a los usados
+        en rgb() y simplemente declaran los valores para los colores rojo, verde y azul en
+        números decimales del 0 al 255. El último, en cambio, corresponde a la nueva capacidad
+        de opacidad. Este valor se debe encontrar dentro de un rango que va de 0 a 1, con 0 como
+        totalmente transparente y 1 como totalmente opaco.
+    </p>
+
+    <section id="seccion3">
+        <img src="codigo3.png" alt="100px">
+    </section>
+
+    <p class="parrafo">En previas versiones de CSS teníamos que usar diferentes técnicas en diferentes
+        navegadores para hacer un elemento transparente. Todas presentaban el mismo
+        problema: el valor de opacidad de un elemento era heredado por sus hijos. Ese problema
+        fue resuelto por rgba() y ahora podemos asignar un valor de opacidad al fondo de una
+        caja sin afectar su contenido.
+    </p>
+
+    <h1 class="tituloM">Función hsla()</h1>
+    <p class="parrafo">
+        Del mismo modo que la función rgba() agrega un valor de opacidad a rgb(), la función
+        hsla() hace lo mismo para la función hsl().
+        La función hsla() es simplemente un función diferente para generar colores, pero es
+        más intuitiva que rgba(). Algunos diseñadores encontrarán más fácil generar un set de
+        colores personalizado utilizando hsla(). La sintaxis de esta función es: hsla(tono,
+        saturación, luminosidad, opacidad).
+    </p>
+
+    <section id="seccion4">
+        <img src="codigo2.png" alt="100px">
+    </section>
+
+    <p class="parrafo">
+        Siguiendo la sintaxis, tono representa el color extraído de una rueda imaginaria y es
+        expresado en grados desde 0 a 360. Cerca de 0 y 360 están los colores rojos, cerca de 120
+        los verdes y cerca de 240 los azules. El valor saturación es representado en porcentaje,
+        desde 0% (escala de grises) a 100% (todo color o completamente saturado). La
+        luminosidad es también un valor en porcentaje desde 0% (completamente oscuro) a
+        100% (completamente iluminado). El valor 50% representa luminosidad normal o
+        promedio. El último valor, así como en rgba(), representa la opacidad.
+    </p>
+
+    <h1 class="tituloM">Propiedad Outline</h1>
+    <p class="parrafo">
+        La propiedad outline es una vieja propiedad CSS que ha sido expandida en CSS3 para
+        incluir un valor de desplazamiento. Esta propiedad era usada para crear un segundo
+        borde, y ahora ese borde puede ser mostrado alejado del borde real del elemento.
+    </p>
+
+    <section id="seccion5">
+        <img src="codigo.png" alt="100px">
+    </section>
+    <p class="parrafo">
+        Se agregan a los estilos originalmente aplicados a la caja de nuestra
+        plantilla un segundo borde de 2 pixeles con un desplazamiento de 15 pixeles. La propiedad
+        outline tiene similares características y usa los mismos parámetros que border. La
+        propiedad outline-offset solo necesita un valor en pixeles.
+    </p>
+
+</body>
+
+<footer>José Manuel Rosas López @Copyright</footer>
+
+</html>

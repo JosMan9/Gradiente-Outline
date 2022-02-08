@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>CSS Outline</title>
+    <link rel="stylesheet" href="gradienteLi.css">
+    <script src="acciones_outline.js"></script>
+</head>
+
+<header id="tit">
+    <p></p>
+    Outline
+    <div id="secc_principal4">
+        <ul>
+            <li>|<a href="index4.html">Página Principal</a>|</li>
+        </ul>
+    </div>
+</header>
+<body id="outline_body">
+    <div>
+        <form class="formlulario1">
+            <fieldset id="formularioOut">
+                <legend>Control de página</legend>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="campoRGBA" disabled>
+                    Campo
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="botonesRGBA" disabled>
+                    Botón
+                </label>
+                <p></p>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="tituloRGBA" disabled>
+                    Título
+                </label>
+                <label class="control">
+                    <input type="checkbox" name="fondo" id="controlRGBA" disabled>
+                    Control de Página
+                </label>
+            </fieldset>
+        </form>
+        <fieldset id="campoOut">
+            <legend>Outline</legend>
+            <p></p>
+            <label>Grosor</label>
+            <input type="number" id="grosor_out" min="0" max="999" onkeyup="validar()">
+            <label>Estilo</label>
+            <select name="estilos" id="estilo_out">
+                <option value="none">None</option>
+                <option value="hidden">Hidden</option>
+                <option value="dotted">Dotted</option>
+                <option value="dashed">Dashed</option>
+                <option value="solid">Solid</option>
+                <option value="double">Double</option>
+                <option value="groove">Groove</option>
+                <option value="ridge">Ridge</option>
+                <option value="inset">Inset</option>
+                <option value="outset">Outset</option>
+            </select>
+            <label>Desfase</label>
+            <input type="number" id="desfase_out" min="0" max="999" onkeyup="validar()">
+            <label>R</label>
+            <input type="number" name="numero" id="rojo_out" min="0" max="255" onkeyup="validar()"  pattern="[0-255]">
+            <label>G</label>
+            <input type="number" name="numero" id="verde_out" min="0" max="255" onkeyup="validar()"> 
+            <label>B</label>
+            <input type="number" name="numero" id="azul_out" min="0" max="255"onkeyup="validar()">
+            <label>A</label>
+            <select id="miselectOut" name="selectOutline" onchange="validar()">
+                <option value="0">0</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1">1</option>
+            </select>
+            <INPUt disabled id="color_prueba" type="number" min=0 max=100></INPUt>
+        </fieldset>
+        <p></p>
+        <button class="accion" id="btn_accionOut" disabled type="button" onclick="agregarOutLine()">Marco</button>
+        <p></p>
+        <canvas id="milienzoOut" width="100px" height="100px"></canvas>
+
+    </div>
+
+    <aside>
+        
+    </aside>
+</body>
+
+<footer>José Manuel Rosas López @Copyright</footer>
+
+</html>
